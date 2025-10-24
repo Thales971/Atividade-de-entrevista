@@ -47,8 +47,5 @@ A entrevista também despertou o meu interesse pessoal pela área — quem sabe,
 - Escrita de conteúdo informativo e autoral  
 - Integração entre tecnologia, arte e linguagem  
 
----
 
-## 📷 Pré-visualização
-
-*(Adicione aqui uma imagem de prévia do site, se desejar)*  
+ 
