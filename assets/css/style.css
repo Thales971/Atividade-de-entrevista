@@ -1,4 +1,4 @@
-/* ===== ESTILO GERAL ===== */
+/* ESTILO GERAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
@@ -17,7 +17,7 @@ body {
   padding-top: 100px; /* espaço pro cabeçalho fixo */
 }
 
-/* ===== CABEÇALHO ===== */
+/* CABEÇALHO */
 header {
   background: linear-gradient(135deg, #b33c86, #622774);
   color: white;
@@ -98,7 +98,7 @@ nav a.ativo {
   padding-bottom: 3px;
 }
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
+/* CONTEÚDO PRINCIPAL E ALGUMAS ANIMAÇÔES */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -109,6 +109,7 @@ main {
   animation: fadeIn 0.8s ease;
 }
 
+/* Ela faz um elemento aparecer suavemente na tela, começando transparente e um pouco deslocado para baixo, e terminando visível e na posição normal: Pesquisei mais ou menos o que fazia:^_~ */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -136,7 +137,7 @@ p {
   text-align: justify;
 }
 
-/* ===== BOTÕES ===== */
+/* BOTÕES: O inline-flex ativa o layout flexível (Flexbox) dentro do elemento, permitindo alinhar e distribuir seus itens com facilidade.  */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -161,7 +162,7 @@ p {
   box-shadow: 0 8px 20px rgba(98, 39, 116, 0.4);
 }
 
-/* ===== FOLHA DE ROSTO ===== */
+/* FOLHA DE ROSTO */
 .folha-rosto {
   background: #fdf4f9;
   padding: 20px;
@@ -170,7 +171,49 @@ p {
   margin-bottom: 30px;
 }
 
-/* ===== ENTREVISTA ===== */
+/* GALERIA DE IMAGENS */
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #b33c86;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      gap: 10px;
+    }
+
+    .gallery-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+/* ENTREVISTA */
 .entrevista-header {
   display: flex;
   align-items: center;
@@ -206,7 +249,7 @@ article.perguntas p {
   margin-bottom: 15px;
 }
 
-/* ===== REFERÊNCIAS ===== */
+/* REFERÊNCIAS: ela muda o símbolo que aparece antes de cada item da lista. */
 .referencias ul {
   list-style-type: square;
   margin-left: 25px;
@@ -221,7 +264,7 @@ article.perguntas p {
   text-decoration: underline;
 }
 
-/* ===== CONTATO ===== */
+/* CONTATO */
 .contato .contact-info {
   background: #fdf4f9;
   padding: 20px;
@@ -244,7 +287,7 @@ article.perguntas p {
   text-decoration: underline;
 }
 
-/* ===== RODAPÉ ===== */
+/* RODAPÉ */
 footer {
   text-align: center;
   padding: 25px 0;
@@ -288,7 +331,7 @@ footer {
   color: #ffd1f1;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* RESPONSIVIDADE  */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
